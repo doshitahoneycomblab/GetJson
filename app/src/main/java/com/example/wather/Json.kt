@@ -7,7 +7,7 @@ data class Json(
 
     var publishingOffice: String?,
     var reportDatetime: String?,
-    var timeSeries: TimeSeries?
+    //var timeSeries: TimeSeries?
 )
 
 data class TimeSeries(

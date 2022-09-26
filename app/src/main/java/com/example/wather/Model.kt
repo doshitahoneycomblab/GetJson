@@ -2,5 +2,6 @@ package com.example.wather
 
 class Model {
 
-    val name: String? = null
+    var publishingOffice: String? = null
+    var reportDatetime: String? = null
 }
