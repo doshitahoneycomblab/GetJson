@@ -4,26 +4,50 @@ import org.w3c.dom.ls.LSInput
 import java.io.Serializable
 
 data class Json(
-
-    var publishingOffice: String?,
-    var reportDatetime: String?,
-    //var timeSeries: TimeSeries?
+    val precipAverage: PrecipAverage,
+    val publishingOffice: String,
+    val reportDatetime: String,
+    val tempAverage: TempAverage,
+    val timeSeries: List<TimeSery>
 )
 
-data class TimeSeries(
-    var timeDefines: List<String>?,
-    var areas: Areas?
+data class PrecipAverage(
+    val areas: List<Area>
 )
 
-data class Areas(
-    var area: Area?,
-    var weatherCodes: List<String>?,
-    var weathers: List<String>?,
-    var winds: List<String>?,
-    var waves: List<String>?
+data class TempAverage(
+    val areas: List<Area>
+)
+
+data class TimeSery(
+    val areas: List<AreaXXXX>,
+    val timeDefines: List<String>
 )
 
 data class Area(
-    var name: String?,
-    var code: String?
+    val area: AreaX,
+    val max: String,
+    val min: String
+)
+
+data class AreaX(
+    val code: String,
+    val name: String
+)
+
+data class AreaXXXX(
+    val area: AreaX,
+    val pops: List<String>,
+    val reliabilities: List<String>,
+    val temps: List<String>,
+    val tempsMax: List<String>,
+    val tempsMaxLower: List<String>,
+    val tempsMaxUpper: List<String>,
+    val tempsMin: List<String>,
+    val tempsMinLower: List<String>,
+    val tempsMinUpper: List<String>,
+    val waves: List<String>,
+    val weatherCodes: List<String>,
+    val weathers: List<String>,
+    val winds: List<String>
 )
