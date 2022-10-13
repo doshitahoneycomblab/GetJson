@@ -1,7 +1,8 @@
 package com.example.wather
 
-class Model {
+data class Model (
 
-    var publishingOffice: String? = null
-    var reportDatetime: String? = null
-}
+    var name: String,
+    var weathers: List<String>,
+    var temps: List<String>,
+)

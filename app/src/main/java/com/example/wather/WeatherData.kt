@@ -3,7 +3,7 @@ package com.example.wather
 import org.w3c.dom.ls.LSInput
 import java.io.Serializable
 
-data class Json(
+data class WeatherData(
     val precipAverage: PrecipAverage,
     val publishingOffice: String,
     val reportDatetime: String,
