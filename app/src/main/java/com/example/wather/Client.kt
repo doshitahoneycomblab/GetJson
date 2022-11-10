@@ -21,6 +21,7 @@ public class Client {
 
     val publishSubject = PublishSubject.create<ArrayList<WeatherData>>();
 
+    val hoge: String = "Hoge"
     private val httpBuilder: OkHttpClient.Builder get() {
         val httpClient = OkHttpClient.Builder()
 
